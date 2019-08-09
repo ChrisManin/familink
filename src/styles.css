@@ -1,5 +1,10 @@
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+html, body {
+  height: 100%;
+}
+
 body {
-  color: black;
-  font-weight: 400;
-  padding-top: 5rem;
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
 }
