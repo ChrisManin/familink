@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/general/home/home.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from './shared/material/material.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { MaterialModule } from './shared/material/material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
