@@ -1,3 +1,9 @@
-h1 {
-  color: blue;
+.navMenu {
+  margin-left: 450%;
+}
+
+.sdnav {
+  width: 12%;
+  text-align: center;
+  padding-top: 5%;
 }
