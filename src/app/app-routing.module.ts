@@ -7,6 +7,10 @@ import { NotFoundComponent } from './modules/general/not-found/not-found.compone
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
+    path: 'items',
+    loadChildren: './modules/application/items/items.module#ItemsModule',
+  },
+  {
     path: 'about',
     loadChildren: './modules/general/about/about.module#AboutModule',
   },
