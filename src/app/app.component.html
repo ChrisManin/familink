@@ -1,17 +1,38 @@
-<header>
-  <section>
-    <h1>{{ title }}</h1>
-  </section>
-  <nav>
-    <ul>
-      <li><a routerLink="/">Accueil</a></li>
-      <li><a routerLink="/members">Membres</a></li>
-      <li><a routerLink="/about">Détails des membres de la famille</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <router-outlet></router-outlet>
-</main>
-
+<div class="main-container">
+  <mat-sidenav-container fullscreen class="pageContent">
+    <mat-sidenav #sidenav mode="push" class="sdnav">
+      <mat-nav-list>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="mainContent" fxLayout="column">
+      <header>
+        <mat-toolbar color="primary" class="head-toolbar">
+          <mat-toolbar-row>
+            <button mat-icon-button (click)="sidenav.toggle()">
+              <mat-icon>menu</mat-icon>
+            </button>
+            <section>
+              <h1>{{ title }}</h1>
+            </section>
+            <nav>
+              <div class="navMenu">
+                <button mat-flat-button color="primary">Accueil</button>
+                <button mat-flat-button color="primary">Membres</button>
+                <button mat-flat-button color="primary">Détails des membres</button>
+              </div>
+            </nav>
+          </mat-toolbar-row>
+        </mat-toolbar>
+      </header>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
