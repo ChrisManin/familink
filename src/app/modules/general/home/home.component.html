@@ -1,33 +1,42 @@
 <div class="row">
-    <div class="col-md-12 text-center">
-      <div class="row pt-1 mb-2" id="welcome-row">
-        <div class="col-md-4 text-center mb-2">
-          <h1 class="h5">
-            <i class="fab fa-android fa-lg mr-2 text-primary"></i>
-            {{ name }}<i class="fab fa-apple fa-lg ml-2 mr-1 text-primary"></i>
-          </h1>
-        </div>
-        <div class="col-md-4 text-center">
-          <h2 class="h5">Bienvenue sur {{ name }} {{ userFirstname }} !</h2>
-        </div>
-        <div class="col-md-4 text-center">
-          <h2 class="resume">Avec {{ name }}, restes en contact avec ta famille ou tes amis et planifies, 
-                        organise ou partage tous les bons moments que vous avez passé ensembles !
-          </h2>
-        </div>
+  <div class="col-md-12 text-center">
+    <div class="row pt-1 mb-2" id="welcome-row">
+      <div class="col-md-4 text-center mb-2">
+        <h1 class="h5">
+          <i class="fab fa-android fa-lg mr-2 text-primary"></i>
+          {{ name }}<i class="fab fa-apple fa-lg ml-2 mr-1 text-primary"></i>
+        </h1>
       </div>
-      <hr>
-      <div class="item-title-wrapper">
-        <div class="col-md-12 text-center">
-          <h3 class="item-title">Tes tribus :<i class="fas fa-list"></i></h3>
-        </div>
+      <div class="col-md-4 text-center">
+        <h2 class="h5">Bienvenue sur {{ name }} {{ userFirstname }} !</h2>
       </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Items</h5>
-          <p class="card-text">Test HttpClient</p>
-          <a href="#" routerLink="/items" class="btn btn-primary">Items</a>
-        </div>
+      <div class="col-md-4 text-center">
+        <h2 class="resume">Avec {{ name }}, restes en contact avec ta famille ou tes amis et planifies,
+          organise ou partage tous les bons moments que vous avez passé ensembles !
+        </h2>
       </div>
     </div>
+    <hr>
+    <div class="item-title-wrapper">
+      <div class="col-md-12 text-center">
+        <h3 class="item-title">Tes tribus :<i class="fas fa-list"></i></h3>
+      </div>
+    </div>
+    <div class="card-wrapper" style="width: 25rem;">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Famille Ferreira</mat-card-title>
+          <mat-card-subtitle>Une famille aussi formidable que grande !</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/img/famille_ferreira.jpg" alt="Illustration de la tribu">
+        <mat-card-content>
+          <p>
+            Toute la famille Ferreira sur 4 générations ! Les grands-parents, les parents, oncles et tantes, cousines et cousins, enfants, nièces et
+            neveux... Tout ce beau petit monde est réuni au sein de cette tribu {{ name }} !
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
+</div>
