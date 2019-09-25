@@ -9,9 +9,8 @@ import { environment } from '../../../../environments/environment';
 export class HomeComponent implements OnInit {
 
   name = environment.application.name;
-  angular = environment.application.angular;
-  bootstrap = environment.application.bootstrap;
-
+  userFirstname = 'Christophe';
+  
   constructor() { }
 
   ngOnInit() {
