@@ -33,3 +33,13 @@
   background-image: url('src/assets/img/famille_ferreira.jpg');
   background-size: cover;
 }
+
+.button-wrapper {
+  text-align: center;
+}
+
+.createTribe {
+  width: 12%;
+  margin: 2%;
+  font-size: 16px;
+}
