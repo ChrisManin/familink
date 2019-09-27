@@ -29,5 +29,31 @@
         <a href="#" routerLink="/items" class="btn btn-primary">Items</a>
       </div>
     </div>
+    <hr>
+    <div class="item-title-wrapper">
+      <div class="col-md-12 text-center">
+        <h3 class="item-title">Tes tribus :<i class="fas fa-list"></i></h3>
+      </div>
+    </div>
+    <div class="card-wrapper" style="width: 25rem;">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Famille Ferreira</mat-card-title>
+          <mat-card-subtitle>Une famille aussi formidable que grande !</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/img/famille_ferreira.jpg" alt="Illustration de la tribu">
+        <mat-card-content>
+          <p>
+            Toute la famille Ferreira sur 4 générations ! Les grands-parents, les parents, oncles et tantes, cousines et cousins, enfants, nièces et
+            neveux... Tout ce beau petit monde est réuni au sein de cette tribu {{ name }} !
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <hr>
+    <div class="button-wrapper">
+        <button class="createTribe" mat-raised-button color="primary">Créer une nouvelle tribu</button>
+    </div>
   </div>
 </div>

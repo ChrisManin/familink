@@ -3,22 +3,43 @@
 }
 
 .card {
-    display: block;
-    background-color: rgba(255, 255, 255, .8);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
-    border-radius: 2px;
-    transition: all .2s ease-in-out;
-  }
-  
-  .card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
-  }
+  display: block;
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  border-radius: 2px;
+  transition: all .2s ease-in-out;
+}
 
-  .resume {
-    font-size: 14px;
-  }
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+}
 
-  .item-title-wrapper {
-    margin-left: 2%;
-    font-size: 20px;
-  }
+.resume {
+  font-size: 14px;
+}
+
+.item-title-wrapper {
+  margin-left: 2%;
+  font-size: 20px;
+}
+
+.card-wrapper {
+  margin: 5%;
+  font-family: 'Aller';
+  background-color: #303030;
+}
+
+.example-header-image {
+  background-image: url('src/assets/img/famille_ferreira.jpg');
+  background-size: cover;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+.createTribe {
+  width: 12%;
+  margin: 2%;
+  font-size: 16px;
+}
