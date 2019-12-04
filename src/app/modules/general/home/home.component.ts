@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   name = environment.application.name;
   userFirstname = 'Christophe';
-  
+
   constructor() { }
 
   ngOnInit() {

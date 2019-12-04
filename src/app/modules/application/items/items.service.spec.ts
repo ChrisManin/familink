@@ -4,7 +4,7 @@ import { ItemsComponent } from './items.component';
 
 describe('ItemsComponent', () => {
   let component: ItemsComponent;
-  let fixture: ComponentFixture<ItemsComponent>
+  let fixture: ComponentFixture<ItemsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
