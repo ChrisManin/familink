@@ -1,16 +1,15 @@
 <div class="row">
   <div class="col-md-12 text-center">
-    <div class="row pt-1 mb-2" id="welcome-row">
-      <div class="col-md-4 text-center mb-2">
+    <div class="pt-1 mb-2" id="welcome-row">
+      <div class="app-title">
         <h1 class="h5">
-          <i class="fab fa-android fa-lg mr-2 text-primary"></i>
-          {{ name }}<i class="fab fa-apple fa-lg ml-2 mr-1 text-primary"></i>
+          {{ name }}
         </h1>
       </div>
-      <div class="col-md-4 text-center">
+      <div class="welcome-msg">
         <h2 class="h5">Bienvenue sur {{ name }} {{ userFirstname }} !</h2>
       </div>
-      <div class="col-md-4 text-center">
+      <div class="app-resume">
         <h2 class="resume">Avec {{ name }}, restes en contact avec ta famille ou tes amis et planifies,
           organise ou partage tous les bons moments passés ensembles !
         </h2>
@@ -19,11 +18,11 @@
     <hr>
     <div class="item-title-wrapper">
       <div class="col-md-12 text-center">
-        <h3 class="item-title">Tes tribus :<i class="fas fa-list"></i></h3>
+        <h3 class="item-title">Tes tribus :</h3>
       </div>
     </div>
-    <div class="card-wrapper" style="width: 25rem;" fxLayout="row" fxLayoutAlign="center center">
-      <mat-card class="example-card" *ngFor="let tribe of tribes">
+    <div class="card-wrapper">
+      <mat-card class="tribe-card" *ngFor="let tribe of tribes" style="width:25rem">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image" style="background-image: url('{{tribe.tribePicture}}'); background-size: cover;"></div>
           <mat-card-title>{{tribe.name}}</mat-card-title>
