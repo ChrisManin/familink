@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { environment } from '../../../../environments/environment';
+import { Tribe } from '../../application/models/tribe';
+import { TRIBES } from '../../../services/mock-tribes';
+import { TribesService } from '../../../services/tribes.service';
+import { CarouselComponent } from 'ngx-carousel-lib';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +13,26 @@ import { environment } from '../../../../environments/environment';
 export class HomeComponent implements OnInit {
 
   name = environment.application.name;
-  angular = environment.application.angular;
-  bootstrap = environment.application.bootstrap;
+  userFirstname = 'Christophe';
+  tribes: Tribe[] = null;
 
-  constructor() { }
+  constructor(private tribesService: TribesService) { }
 
-  ngOnInit() {
+  @ViewChild('tribesCarousel', {static: false}) tribesCarousel: CarouselComponent;
+
+  ngOnInit(): void {
+    this.getTribes();
   }
 
+  getTribes(): void {
+    this.tribes = this.tribesService.getTribes();
+  }
+
+  slideNext() {
+    this.tribesCarousel.slideNext();
+  }
+
+  slidePrevious() {
+    this.tribesCarousel.slidePrev();
+  }
 }

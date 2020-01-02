@@ -1,1 +1,54 @@
-<p>home works!</p>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <div class="pt-1 mb-2" id="welcome-row">
+      <div class="app-title">
+        <h1 class="h5">
+          {{ name }}
+        </h1>
+      </div>
+      <div class="welcome-msg">
+        <h2 class="h5">Bienvenue sur {{ name }} {{ userFirstname }} !</h2>
+      </div>
+      <div class="app-resume">
+        <h2 class="resume">Avec {{ name }}, restes en contact avec ta famille ou tes amis et planifies,
+          organise ou partage tous les bons moments passés ensembles !
+        </h2>
+      </div>
+    </div>
+    <hr>
+    <div class="item-title-wrapper">
+      <div class="col-md-12 text-center">
+        <h3 class="item-title">Tes tribus :</h3>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <button mat-fab color="primary" (click)="slidePrevious()" id="button-prev">
+        <mat-icon id="slide-left">keyboard_arrow_left</mat-icon>
+      </button>
+      <carousel-component #tribesCarousel>
+        <div class="item-carousel" *ngFor="let tribe of tribes" style="border:none;">
+          <mat-card class="tribe-card" style="width:25rem">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image" style="background-image: url('{{tribe.tribePicture}}'); background-size: cover;"></div>
+              <mat-card-title>{{tribe.name}}</mat-card-title>
+              <mat-card-subtitle>{{tribe.resume}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{tribe.tribePicture}}" alt="Illustration de la tribu">
+            <mat-card-content>
+              <p>
+                {{tribe.description}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </carousel-component>
+      <button mat-fab color="primary" (click)="slideNext()" id="button-next">
+        <mat-icon id="slide-right">keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+    <hr>
+    <div class="button-wrapper">
+        <button class="createTribe" mat-raised-button color="primary">Créer une nouvelle tribu</button>
+    </div>
+  </div>
+</div>
