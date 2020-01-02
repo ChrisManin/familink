@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../../environments/environment';
+import { Tribe } from '../../application/models/tribe';
+import { TRIBES } from '../../../services/mock-tribes';
+import { TribesService } from '../../../services/tribes.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +13,15 @@ export class HomeComponent implements OnInit {
 
   name = environment.application.name;
   userFirstname = 'Christophe';
+  tribes: Tribe[] = null;
 
-  constructor() { }
+  constructor(private tribesService: TribesService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getTribes();
   }
 
+  getTribes(): void {
+    this.tribes = this.tribesService.getTribes();
+  }
 }
