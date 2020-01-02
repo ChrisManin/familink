@@ -33,6 +33,8 @@
     "express": "^4.15.2",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
+    "ngx-carousel-lib": "^0.1.2",
+    "ngx-carousels": "0.0.6",
     "roboto-fontface": "^0.10.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",

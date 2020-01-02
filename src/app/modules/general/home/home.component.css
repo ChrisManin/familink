@@ -28,11 +28,30 @@
 }
 
 .card-wrapper {
-  margin: 5%;
   display: flex;
   flex-direction: row;
   font-family: 'Aller';
   background-color: #303030;
+}
+
+carousel-component{
+  display: block;
+  overflow: hidden;
+  width: 80%;
+  height: 600px;
+  margin: 0 auto;
+}
+
+#button-next {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+}
+
+#button-prev {
+  position: absolute;
+  left: 10%;
+  top: 50%;
 }
 
 .tribe-card {
@@ -51,6 +70,5 @@
 
 .createTribe {
   width: 12%;
-  margin: 2%;
   font-size: 16px;
 }

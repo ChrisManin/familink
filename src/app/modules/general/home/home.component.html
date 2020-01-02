@@ -22,19 +22,29 @@
       </div>
     </div>
     <div class="card-wrapper">
-      <mat-card class="tribe-card" *ngFor="let tribe of tribes" style="width:25rem">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image" style="background-image: url('{{tribe.tribePicture}}'); background-size: cover;"></div>
-          <mat-card-title>{{tribe.name}}</mat-card-title>
-          <mat-card-subtitle>{{tribe.resume}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{tribe.tribePicture}}" alt="Illustration de la tribu">
-        <mat-card-content>
-          <p>
-            {{tribe.description}}
-          </p>
-        </mat-card-content>
-      </mat-card>
+      <button mat-fab color="primary" (click)="slidePrevious()" id="button-prev">
+        <mat-icon id="slide-left">keyboard_arrow_left</mat-icon>
+      </button>
+      <carousel-component #tribesCarousel>
+        <div class="item-carousel" *ngFor="let tribe of tribes" style="border:none;">
+          <mat-card class="tribe-card" style="width:25rem">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image" style="background-image: url('{{tribe.tribePicture}}'); background-size: cover;"></div>
+              <mat-card-title>{{tribe.name}}</mat-card-title>
+              <mat-card-subtitle>{{tribe.resume}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{tribe.tribePicture}}" alt="Illustration de la tribu">
+            <mat-card-content>
+              <p>
+                {{tribe.description}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </carousel-component>
+      <button mat-fab color="primary" (click)="slideNext()" id="button-next">
+        <mat-icon id="slide-right">keyboard_arrow_right</mat-icon>
+      </button>
     </div>
     <hr>
     <div class="button-wrapper">

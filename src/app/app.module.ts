@@ -8,6 +8,7 @@ import { NotFoundComponent } from './modules/general/not-found/not-found.compone
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselModule } from 'ngx-carousel-lib';
 
 
 @NgModule({
@@ -21,8 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
   ],
+  exports: [CarouselModule],
   providers: [],
   bootstrap: [AppComponent]
 })
