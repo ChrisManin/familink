@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-carousel-lib';
+import { DetailTribeComponent } from './modules/general/detail-tribe/detail-tribe.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { CarouselModule } from 'ngx-carousel-lib';
     AppComponent,
     HomeComponent,
     NotFoundComponent,
+    DetailTribeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

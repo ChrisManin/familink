@@ -54,6 +54,10 @@ carousel-component{
   top: 50%;
 }
 
+#button-next:focus, #button-prev:focus {
+  outline-style: none;
+}
+
 .tribe-card {
   margin: auto;
   height: 600px;

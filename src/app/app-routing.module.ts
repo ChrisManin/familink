@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './modules/general/home/home.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
+import { DetailTribeComponent } from './modules/general/detail-tribe/detail-tribe.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
     path: 'members',
     loadChildren: './modules/general/members/members.module#MembersModule',
   },
+  { path: 'tribe/:id', component: DetailTribeComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

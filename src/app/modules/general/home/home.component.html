@@ -27,7 +27,7 @@
       </button>
       <carousel-component #tribesCarousel>
         <div class="item-carousel" *ngFor="let tribe of tribes" style="border:none;">
-          <mat-card class="tribe-card" style="width:25rem">
+          <mat-card class="tribe-card" style="width:25rem" (click)="selectTribe(tribe)">
             <mat-card-header>
               <div mat-card-avatar class="example-header-image" style="background-image: url('{{tribe.tribePicture}}'); background-size: cover;"></div>
               <mat-card-title>{{tribe.name}}</mat-card-title>
