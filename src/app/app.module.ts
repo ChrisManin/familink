@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-carousel-lib';
 import { DetailTribeComponent } from './modules/general/detail-tribe/detail-tribe.component';
+import { LoginComponent } from './modules/application/login/login.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { DetailTribeComponent } from './modules/general/detail-tribe/detail-trib
     HomeComponent,
     NotFoundComponent,
     DetailTribeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

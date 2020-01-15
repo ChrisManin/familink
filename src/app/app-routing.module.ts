@@ -6,7 +6,12 @@ import { NotFoundComponent } from './modules/general/not-found/not-found.compone
 import { DetailTribeComponent } from './modules/general/detail-tribe/detail-tribe.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
+  {
+    path: 'login',
+    loadChildren: './modules/application/login/login.module#LoginModule'
+  },
   {
     path: 'items',
     loadChildren: './modules/application/items/items.module#ItemsModule',
